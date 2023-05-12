@@ -106,6 +106,9 @@ public class ListDE {
 
     public void turnOnLedsFromTheMiddleToExtremes() throws InterruptedException {
 
+        if(size==1){
+            return;    //no de pueden prender los extremos
+        }
         if(size%2==0){//la cantidad de datos es par
             int position = (size/2); //como es par simpre me va a dar natural
             NodeDE temp = this.head;
